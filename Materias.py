@@ -32,4 +32,6 @@ class Materia:
     
     def getaprobacion(self):
         return self.__aprobacion
-
+    
+    def __gt__(self, otro):
+        return self.getnota() > otro
