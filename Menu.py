@@ -48,14 +48,14 @@ def opb(lm,materia,aa):
     la = []
     while i < len(lm):
         if lm[i].getnombre() == materia:
-            if lm[i].getaprobacion() == 'P': #and lm[i].getnota() > 6:
+            if lm[i].getaprobacion() == 'P' and lm[i].getnota() > '6':
                 la.append(lm[i].getdni())
                 i = len(lm)
         else:i += 1
     if not la:
         print('En la materia {}, no hubo alumnos que promocionaran o su nota fue menor a 7' .format(materia))
     else:
-        print('DNI\tApellido y nombre\t\tAño que cursa')
+        print('DNI\t\tApellido y nombre\t\tAño que cursa')
         a = 0
         while a < len(la):
             dni = la[a]
@@ -63,10 +63,12 @@ def opb(lm,materia,aa):
             while j < len(aa):
                 if aa[j].getdni() == dni:
                     alumno = aa[j]
-                    print('{}\t{}\t{}'.format(alumno.getdni(), alumno.getapellido()+ '' +alumno.getnombre(), alumno.getañocar()))
+                    print('{}\t{}\t\t\t\t{}'.format(alumno.getdni(), alumno.getapellido()+ ' ' +alumno.getnombre(), alumno.getañocar()))
                     j = len(aa)
                 else: j+=1
-            a += 
+            a += 1
+            
+            
  def opc(aa):
      a = sorted(aa, reverse=False)
      for i in range(len(a)):
