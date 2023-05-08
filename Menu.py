@@ -50,7 +50,8 @@ def opb(lm,materia,aa):
         if lm[i].getnombre() == materia:
             if lm[i].getaprobacion() == 'P' and lm[i].getnota() > '6':
                 la.append(lm[i].getdni())
-                i = len(lm)
+                #i = len(lm)
+                i += 1
         else:i += 1
     if not la:
         print('En la materia {}, no hubo alumnos que promocionaran o su nota fue menor a 7' .format(materia))
