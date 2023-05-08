@@ -36,4 +36,4 @@ class Alumno:
         if self.getañocar() == otro.getañocar():
             return (self.getapellido(), self.getnombre()) < (otro.getapellido(), otro.getnombre())
         else:
-            return self.getañocar() < otro.getañocar() and ((self.getapellido(), self.getnombre()) < (otro.getapellido(), otro.getnombre()))
+            return self.getañocar() < otro.getañocar()
