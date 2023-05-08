@@ -8,6 +8,7 @@ if __name__ == "__main__":
     materias = []
     with open('materiasAprobadas.csv', 'r', encoding='utf8') as archivo:
         reader = csv.reader(archivo, delimiter=';')
+        next(reader)
         for fila in reader:
             materia = Materia(fila[0],fila[1],fila[2],fila[3],fila[4])
             materias.append(materia)
